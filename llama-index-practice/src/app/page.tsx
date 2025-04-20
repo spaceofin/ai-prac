@@ -1,6 +1,5 @@
 import { VectorStoreIndex } from "llamaindex";
 import { loadDocumentsFromDir } from "./lib/loadDocuments";
-import "./lib/ollamaConfig";
 
 export default async function Home() {
   const question = "LLM의 종류에는 어떤 것들이 있습니까?";
@@ -14,7 +13,7 @@ export default async function Home() {
   const answer = response.message.content;
   // console.log(documents);
   // console.log(response);
-  console.log(answer);
+
   return (
     <div className="bg-gray-200 rounded-md m-10 py-5 px-8 h-72 w-1/2 ">
       <p className="text-2xl font-bold">{question}</p>

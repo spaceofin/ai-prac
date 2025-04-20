@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./lib/ollamaConfig";
 
 export const metadata: Metadata = {
   title: "Llama Index Practice",
