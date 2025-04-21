@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@llamaindex/huggingface": "^0.1.6",
     "@llamaindex/ollama": "^0.1.2",
     "llamaindex": "^0.10.2",
     "next": "15.3.1",
