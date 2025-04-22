@@ -1,7 +1,7 @@
 import { VectorStoreIndex } from "llamaindex";
 import { loadDocumentsFromDir } from "@/app/lib/loadDocuments";
 
-export default async function Home() {
+export default async function ManualPage() {
   const question = "LLM의 종류에는 어떤 것들이 있습니까?";
 
   const documents = loadDocumentsFromDir("data");
