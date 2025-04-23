@@ -1,5 +1,5 @@
 import { agent } from "llamaindex";
-import { sumNumbers, divideNumbers } from "./mathTools";
+import { divideNumbers, sumNumbers } from "../lib/mathTools";
 import { ollama } from "@llamaindex/ollama";
 
 export const mathAgent = agent({

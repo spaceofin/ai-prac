@@ -4,7 +4,7 @@ import { loadDocumentsFromDir } from "@/app/lib/loadDocuments";
 export default async function ManualPage() {
   const question = "LLM의 종류에는 어떤 것들이 있습니까?";
 
-  const documents = loadDocumentsFromDir("data");
+  const documents = loadDocumentsFromDir("data/ai");
   const index = await VectorStoreIndex.fromDocuments(documents);
   const query_engine = index.asQueryEngine();
   const response = await query_engine.query({

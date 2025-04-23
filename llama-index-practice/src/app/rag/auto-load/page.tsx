@@ -5,7 +5,7 @@ import path from "path";
 import { ollama } from "@llamaindex/ollama";
 
 export default async function AutoLoadPage() {
-  const dirPath = path.resolve(process.cwd(), "data");
+  const dirPath = path.resolve(process.cwd(), "data/ai");
 
   const reader = new SimpleDirectoryReader();
   const documents = await reader.loadData(dirPath);
