@@ -1,15 +1,24 @@
-import { agent, VectorStoreIndex } from "llamaindex";
-import { SimpleDirectoryReader } from "@llamaindex/readers/directory";
+import { agent, LlamaParseReader, VectorStoreIndex } from "llamaindex";
+// import { SimpleDirectoryReader } from "@llamaindex/readers/directory";
 import "../../config/huggingfaceConfig";
 import path from "path";
 import { ollama } from "@llamaindex/ollama";
 import { sumNumbers } from "@/app/lib/mathTools";
 
 export default async function RagMathPage() {
-  const dirPath = path.resolve(process.cwd(), "data/cat-city");
+  // const dirPath = path.resolve(process.cwd(), "data/cat-city");
+  // const reader = new SimpleDirectoryReader();
+  // const documents = await reader.loadData(dirPath);
 
-  const reader = new SimpleDirectoryReader();
-  const documents = await reader.loadData(dirPath);
+  const filePath = path.resolve(
+    process.cwd(),
+    "data/cat-city/cat_city_budget_report_2024-25.pdf"
+  );
+  const reader = new LlamaParseReader();
+  const documents = await reader.loadData(filePath);
+
+  console.log(documents);
+
   const index = await VectorStoreIndex.fromDocuments(documents);
 
   const tools = [
