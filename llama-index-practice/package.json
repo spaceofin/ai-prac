@@ -11,7 +11,9 @@
   "dependencies": {
     "@llamaindex/huggingface": "^0.1.6",
     "@llamaindex/ollama": "^0.1.2",
+    "@llamaindex/qdrant": "^0.1.11",
     "@llamaindex/readers": "^3.0.2",
+    "@qdrant/js-client-rest": "^1.14.0",
     "llamaindex": "^0.10.2",
     "next": "15.3.1",
     "react": "^19.0.0",

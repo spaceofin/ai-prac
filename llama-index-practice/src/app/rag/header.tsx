@@ -18,6 +18,11 @@ export default function Header() {
         className="border-2 border-slate-700 rounded-md w-36 flex justify-center">
         math
       </Link>
+      <Link
+        href="/rag/vector-store"
+        className="border-2 border-slate-700 rounded-md w-36 flex justify-center">
+        vector store
+      </Link>
     </div>
   );
 }
